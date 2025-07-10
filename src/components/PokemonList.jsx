@@ -3,7 +3,6 @@ import { getPokemon } from "../services/pokeapi"
 import PokemonCard from "./PokemonCard"
 export default function PokemonList(){
     const [pokemons, setPokemons] = useState([])
-
     useEffect(()=>{
         async function fetchData() {
             const data = await getPokemon(50)
