@@ -13,3 +13,13 @@ export async function getPokemon(offset=50) {
     }
     return data
 }
+export async function getPokemonByName(name) {
+    try {
+        const response = await fetch(`${API_URL}/pokemon/${name}`)
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.log(error)
+        return false
+    }
+}
